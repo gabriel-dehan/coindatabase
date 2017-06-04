@@ -1,0 +1,47 @@
+@keyframes noise-anim{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+
+.glitch {
+  position: relative !important;
+}
+.glitch:after{
+  content:attr(data-text);
+  position:absolute;
+  left:2px;
+  text-shadow:-1px 0 lighten($red, 30%);
+  top:-3px;
+  color: $black;
+  background: $white;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim 3s infinite linear alternate-reverse;
+  animation-delay: 5s;
+}
+
+@keyframes noise-anim-2{
+  $steps:20;
+  @for $i from 0 through $steps{
+    #{percentage($i*(1/$steps))}{
+      clip:rect(random(100)+px,9999px,random(100)+px,0);
+    }
+  }
+}
+.glitch:before{
+  content:attr(data-text);
+  position:absolute;
+  left:-2px;
+  text-shadow:1px 0 lighten($blue, 30%); 
+  top:-3px;
+  color: $black;
+  background: $white;
+  overflow:hidden;
+  clip:rect(0,900px,0,0); 
+  animation:noise-anim-2 4.5s infinite linear alternate-reverse;
+  animation-delay: 5s;
+}

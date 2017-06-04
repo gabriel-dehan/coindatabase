@@ -1,0 +1,69 @@
+/* -------------------------------------
+ * Fonts
+ * ------------------------------------- */
+// Google fonts
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+
+$base-font: "Fira Mono", "monospace", "Open Sans", "Helvetica", "sans-serif";
+$header-font: "PT Mono", "monospace", "Raleway", "Helvetica", "sans-serif";
+
+// Global
+$html-font-size: 10px;
+$html-line-height: 1.42858;
+
+$body-font-size: 1.4rem;
+
+// https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+$body-font-family: $base-font, -apple-system, BlinkMacSystemFont, 
+"Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", 
+"Fira Sans", "Droid Sans", "Helvetica Neue", 
+sans-serif;
+
+// Sizes
+$layout-gutter: 1rem;
+$paddings: 0 0.5 1 1.5 2 3 4 5;
+
+// Colors
+
+$red:        #dc322f;
+$yellow:     #b58900;
+$orange:     #cb4b16;
+$dark-green: #859900;
+$green:      #a5d206;
+$magenta:    #d33682;
+$violet:     #6c71c4;
+$cyan:       #2aa198;
+$blue:       #268bd2;
+$darker-blue:  #002b36;
+$dark-blue:    #073642;
+$dark-grey:    #586e75;
+$grey:         #657b83;
+$light-grey:   #839496;
+$lighter-grey: #93a1a1;
+$darker-white: #fdf6e3;
+$dark-white:   #eee8d5;
+$white:        #fffcf5;
+$black:        $grey;
+
+
+$body-background: $white;
+$body-font-color: $black;
+
+$core-color: $green;
+$core-secondary-color: lighten($core-color, 60%);
+$core-light-color: $white;
+$core-meta-color: $yellow;
+$core-link-color: $orange;
+$core-border-color: $dark-grey;
+$core-empty-bg: $white;
+$control-color: #c5c5c5;
+$control-color-success: #32b643;
+$control-color-info: #0193eb;
+$control-color-warning: #ffb700;
+$control-color-danger: #C62828;
+
+$brand-color: $black;
+

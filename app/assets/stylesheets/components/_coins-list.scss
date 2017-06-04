@@ -1,0 +1,40 @@
+.pairs-selector {
+  margin-left: 0;
+  font-size: 0.8em;
+  list-style: none;
+
+  .pair-tab {
+    cursor: pointer;
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 0.1em .2em;
+    padding: 0.8em 1.3em;
+    background: lighten($black, 10%);
+    border: 1px solid $white;
+
+    &.active {
+      cursor: default;
+      background: $white;
+      color: $black;
+
+      &:hover {
+        background: $white;
+      }
+    }
+
+    &:hover {
+      background: darken($black, 10%);
+    }
+  }
+}
+
+
+.trade-container {
+  &.buy {
+    background: #001502 !important;
+  }
+
+  &.sell {
+    background: rgb(84, 0, 16) !important;
+  }
+}

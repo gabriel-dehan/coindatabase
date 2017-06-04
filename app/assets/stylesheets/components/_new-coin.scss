@@ -1,0 +1,15 @@
+.coin-specs {
+  transform-origin: top;
+  transition: all 0.26s ease;
+
+  &.collapsed {
+    transform: scaleY(0);    
+    max-height: 0;
+  }
+
+  &.expanded {
+    transform: scaleY(1);    
+    max-height: 1000px;
+  }
+
+}

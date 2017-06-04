@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TODO</title>
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.0/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.0/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+  </head>
+  <body>
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
+    <%= yield %>
+    <script type="text/javascript">
+     window.CoinDB = {};
+     window.CoinDB.loggedIn = <%= (!!current_user).to_json %>;
+     window.CoinDB.ENV = {
+       user: "<%= raw current_user.try(:email) %>",
+       token: "<%= raw current_user.try(:authentication_token) %>"
+     }
+    </script>
+    <%= javascript_include_tag 'application' %>
+    <% if Rails.env.development? %>
+      <%= react_component("Devtools", props: {}, prerender: false) %>
+    <% end %>
+  </body>
+</html>

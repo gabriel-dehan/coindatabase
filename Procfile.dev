@@ -1,0 +1,3 @@
+web: rails s -p 3000
+client: sh -c 'rm app/assets/webpack/* || true && cd client && bundle exec rake react_on_rails:locale && yarn run build:development'
+proxy sh -c "export PORT=8080 && export CORSANYWHERE_RATELIMIT='50 3' && node client/node_modules/cors-anywhere/server.js"

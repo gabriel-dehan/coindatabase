@@ -1,0 +1,21 @@
+a {
+  color: #00b4ff;
+  padding: 0.8em 1.2em;
+
+  &:hover {
+    color: white;
+    background: #00b4ff;
+  }
+}
+
+
+.form-input {
+  background: $white;
+  color: $black;
+}
+
+
+.form-switch input:checked + .form-icon {
+  background: $green;
+  border-color: $green;
+}
